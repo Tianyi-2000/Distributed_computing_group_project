@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 
 print("Starting data preprocessing...")
@@ -27,6 +29,11 @@ for file in num_files:
     df["quarter"] = quarter
     df["year"] = 2020
     df.to_csv(file, index=False)
+
+# create merged directory if it doesn't exist
+
+
+os.makedirs("./data/processed/merged", exist_ok=True)
 
 
 # merge q1, q2, q3, q4 files into single files
