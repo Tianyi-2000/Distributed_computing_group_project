@@ -27,3 +27,5 @@ gcloud projects add-iam-policy-binding distributed-computing-478219 --member="us
 gcloud projects add-iam-policy-binding distributed-computing-478219 --member="user:bostonabautista@gmail.com" --role="projects/distributed-computing-478219/roles/groupproject"
 # alexluous@gmail.com
 gcloud projects add-iam-policy-binding distributed-computing-478219 --member="user:alexluous@gmail.com" --role="projects/distributed-computing-478219/roles/groupproject"
+# Naderzadnikki@gmail.com
+gcloud projects add-iam-policy-binding distributed-computing-478219 --member="user:naderzadnikki@gmail.com" --role="projects/distributed-computing-478219/roles/groupproject"
