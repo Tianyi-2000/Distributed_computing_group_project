@@ -31,9 +31,9 @@ for file in num_files:
     df.to_csv(file, index=False)
 
 # create merged directory if it doesn't exist
-
-
 os.makedirs("./data/processed/merged", exist_ok=True)
+# create chunks directory if it doesn't exist
+os.makedirs("./data/processed/chunks", exist_ok=True)
 
 
 # merge q1, q2, q3, q4 files into single files
@@ -45,3 +45,13 @@ for prefix in ["num", "pre", "sub", "tag"]:
         all_dfs.append(df)
     merged_df = pd.concat(all_dfs, ignore_index=True)
     merged_df.to_csv(f"./data/processed/merged/{prefix}_2020.csv", index=False)
+
+
+# create one small chunk of 10000 lines for testing, one for each file
+for prefix in ["num", "pre", "sub", "tag"]:
+    df = pd.read_csv(f"./data/processed/merged/{prefix}_2020.csv")
+    chunk_size = 10000
+    chunk_df = df.head(chunk_size)
+    chunk_df.to_csv(
+        f"./data/processed/chunks/{prefix}_2020_chunk.csv", index=False
+    )
