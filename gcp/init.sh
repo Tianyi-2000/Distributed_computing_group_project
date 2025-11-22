@@ -14,7 +14,7 @@ gcloud storage cp ../data/processed/merged/tag_2020.csv gs://msds-694-cohort-14-
 gcloud iam roles create groupproject --project=distributed-computing-478219 --title="Group Project Power Users"
 
 # add permissions to role
-gcloud iam roles update groupproject --project=distributed-computing-478219 --add-permissions="resourcemanager.projects.get,storage.objects.get,storage.objects.list,storage.objects.create,storage.objects.delete,dataproc.clusters.create,dataproc.clusters.delete,dataproc.clusters.get,dataproc.clusters.update,dataproc.jobs.create,dataproc.jobs.get,dataproc.jobs.list"
+gcloud iam roles update groupproject --project=distributed-computing-478219 --add-permissions="resourcemanager.projects.get,storage.buckets.list,storage.objects.get,storage.objects.list,storage.objects.create,storage.objects.delete,dataproc.clusters.create,dataproc.clusters.delete,dataproc.clusters.get,dataproc.clusters.update,dataproc.jobs.create,dataproc.jobs.get,dataproc.jobs.list"
 
 
 # invite users to project
