@@ -38,3 +38,4 @@ data/processed/q4/sub.csv
 data/processed/q4/sub.txt
 data/processed/q4/tag.csv
 data/processed/q4/tag.txt
+.DS_Store
