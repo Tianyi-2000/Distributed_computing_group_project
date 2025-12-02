@@ -1,22 +1,25 @@
 #!/bin/bash
 set -e
 
+# REPLACE WITH YOUR ARGUMENTS
+NOTEBOOK_NAME=$1
+
 # REPLACE WITH YOUR PROJECT ID
 PROJECT_ID="distributed-computing-478219"
 BUCKET_NAME="msds-694-cohort-14-3" 
-NOTEBOOK_PATH=/Users/nikkinaderzad/Desktop/Distributed_gp/Distributed_computing_group_project/notebooks/niki.ipynb
-SCRIPT_PATH=/Users/nikkinaderzad/Desktop/Distributed_gp/Distributed_computing_group_project/notebooks/niki.py
+NOTEBOOK_PATH=./notebooks/$NOTEBOOK_NAME.ipynb
+SCRIPT_PATH=./notebooks/$NOTEBOOK_NAME.py
 
 # create storage bucket (if needed)
 # gcloud storage buckets create gs://$BUCKET_NAME
 
 # convert jupyter notebook to python script
 echo "Converting notebook to Python script..."
-jupyter nbconvert --to script "$NOTEBOOK_PATH" --output niki
+jupyter nbconvert --to script "$NOTEBOOK_PATH" --output $NOTEBOOK_NAME
 
 # upload python script to storage bucket
 echo "Uploading Python script to bucket..."
-gcloud storage cp "$SCRIPT_PATH" gs://$BUCKET_NAME/scripts/niki.py
+gcloud storage cp "$SCRIPT_PATH" gs://$BUCKET_NAME/scripts/$NOTEBOOK_NAME.py
 
 # create dataproc cluster (check if it already exists)
 echo "Creating dataproc cluster..."
@@ -44,7 +47,7 @@ gcloud dataproc clusters list --region=us-central1 --project=$PROJECT_ID
 
 # submit python script to cluster
 echo "Submitting PySpark job..."
-JOB_ID=$(gcloud dataproc jobs submit pyspark gs://$BUCKET_NAME/scripts/niki.py \
+JOB_ID=$(gcloud dataproc jobs submit pyspark gs://$BUCKET_NAME/scripts/$NOTEBOOK_NAME.py \
     --cluster=distributed-cluster-1 \
     --region=us-central1 \
     --project=$PROJECT_ID \
@@ -62,5 +65,8 @@ echo "Job completed!"
 # delete cluster, no approval needed
 echo "Deleting cluster..."
 gcloud dataproc clusters delete distributed-cluster-1 --region=us-central1 --project=$PROJECT_ID --quiet
+
+# remove local python script
+rm "$SCRIPT_PATH"
 
 echo "Done!"
