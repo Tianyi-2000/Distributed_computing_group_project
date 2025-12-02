@@ -4,19 +4,19 @@ set -e
 # REPLACE WITH YOUR PROJECT ID
 PROJECT_ID="distributed-computing-478219"
 BUCKET_NAME="msds-694-cohort-14-3" 
-NOTEBOOK_PATH="/Users/ignacio/Distributed_computing_group_project/notebooks/ignacio.ipynb"
-SCRIPT_PATH="/Users/ignacio/Distributed_computing_group_project/notebooks/ignacio.py"
+NOTEBOOK_PATH=/Users/nikkinaderzad/Desktop/Distributed_gp/Distributed_computing_group_project/notebooks/niki.ipynb
+SCRIPT_PATH=/Users/nikkinaderzad/Desktop/Distributed_gp/Distributed_computing_group_project/notebooks/niki.py
 
 # create storage bucket (if needed)
 # gcloud storage buckets create gs://$BUCKET_NAME
 
 # convert jupyter notebook to python script
 echo "Converting notebook to Python script..."
-jupyter nbconvert --to script "$NOTEBOOK_PATH" --output ignacio
+jupyter nbconvert --to script "$NOTEBOOK_PATH" --output niki
 
 # upload python script to storage bucket
 echo "Uploading Python script to bucket..."
-gcloud storage cp "$SCRIPT_PATH" gs://$BUCKET_NAME/scripts/ignacio.py
+gcloud storage cp "$SCRIPT_PATH" gs://$BUCKET_NAME/scripts/niki.py
 
 # create dataproc cluster (check if it already exists)
 echo "Creating dataproc cluster..."
@@ -44,7 +44,7 @@ gcloud dataproc clusters list --region=us-central1 --project=$PROJECT_ID
 
 # submit python script to cluster
 echo "Submitting PySpark job..."
-JOB_ID=$(gcloud dataproc jobs submit pyspark gs://$BUCKET_NAME/scripts/ignacio.py \
+JOB_ID=$(gcloud dataproc jobs submit pyspark gs://$BUCKET_NAME/scripts/niki.py \
     --cluster=distributed-cluster-1 \
     --region=us-central1 \
     --project=$PROJECT_ID \
