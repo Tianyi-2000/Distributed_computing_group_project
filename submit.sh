@@ -1,5 +1,8 @@
 #!/bin/bash
-set -e
+# set -e
+
+# REPLACE WITH YOUR ARGUMENTS
+NOTEBOOK_NAME=$1
 
 # REPLACE WITH YOUR ARGUMENTS
 NOTEBOOK_NAME=$1
@@ -64,7 +67,10 @@ echo "Job completed!"
 
 # delete cluster, no approval needed
 echo "Deleting cluster..."
-gcloud dataproc clusters delete distributed-cluster-1 --region=us-central1 --project=$PROJECT_ID --quiet
+# gcloud dataproc clusters delete distributed-cluster-1 --region=us-central1 --project=$PROJECT_ID --quiet
+
+# remove local python script
+rm "$SCRIPT_PATH"
 
 # remove local python script
 rm "$SCRIPT_PATH"
