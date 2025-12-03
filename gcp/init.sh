@@ -9,6 +9,7 @@ gcloud storage cp ../data/processed/merged/num_2020.csv gs://msds-694-cohort-14-
 gcloud storage cp ../data/processed/merged/pre_2020.csv gs://msds-694-cohort-14-3/data/pre_2020.csv
 gcloud storage cp ../data/processed/merged/sub_2020.csv gs://msds-694-cohort-14-3/data/sub_2020.csv
 gcloud storage cp ../data/processed/merged/tag_2020.csv gs://msds-694-cohort-14-3/data/tag_2020.csv
+gcloud storage cp ../data/SIC_Lookup.csv gs://msds-694-cohort-14-3/data/SIC_Lookup.csv
 
 # create role groupproject with bucket object reader writer and dataproc admin
 gcloud iam roles create groupproject --project=distributed-computing-478219 --title="Group Project Power Users"
