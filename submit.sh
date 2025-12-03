@@ -65,7 +65,7 @@ echo "Waiting for job to complete..."
 gcloud dataproc jobs wait "$JOB_ID" --region=us-central1 --project=$PROJECT_ID
 
 # output to local file
-gcloud dataproc jobs wait "$JOB_ID" --region=us-central1 --project=$PROJECT_ID > job_output_$NOTEBOOK_NAME.txt
+gcloud dataproc jobs wait "$JOB_ID" --region=us-central1 --project=$PROJECT_ID --region us-central1 2>&1 | tee job_$NOTEBOOK_NAME.log
 
 echo "Job completed!"
 
