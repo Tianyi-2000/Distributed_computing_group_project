@@ -81,4 +81,4 @@ rm "$SCRIPT_PATH"
 echo "Done!"
 
 # # generate html report
-# jupyter nbconvert --to html "$NOTEBOOK_PATH" --output report_$NOTEBOOK_NAME.html
+jupyter nbconvert --to html "$NOTEBOOK_PATH" --output report_$NOTEBOOK_NAME.html
