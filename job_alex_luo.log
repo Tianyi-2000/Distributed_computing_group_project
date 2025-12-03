@@ -1,0 +1,63 @@
+Waiting for job output...
+25/12/03 04:22:02 INFO org.apache.spark.SparkEnv: Registering MapOutputTracker
+25/12/03 04:22:02 INFO org.apache.spark.SparkEnv: Registering BlockManagerMaster
+25/12/03 04:22:02 INFO org.apache.spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+25/12/03 04:22:02 INFO org.apache.spark.SparkEnv: Registering OutputCommitCoordinator
+25/12/03 04:22:02 INFO org.sparkproject.jetty.util.log: Logging initialized @3270ms to org.sparkproject.jetty.util.log.Slf4jLog
+25/12/03 04:22:02 INFO org.sparkproject.jetty.server.Server: jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 1.8.0_472-b08
+25/12/03 04:22:02 INFO org.sparkproject.jetty.server.Server: Started @3376ms
+25/12/03 04:22:02 INFO org.sparkproject.jetty.server.AbstractConnector: Started ServerConnector@722323a5{HTTP/1.1, (http/1.1)}{0.0.0.0:40143}
+25/12/03 04:22:03 INFO com.google.cloud.dataproc.DataprocSparkPlugin: Registered 128 driver metrics
+25/12/03 04:22:04 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at distributed-cluster-1-m/10.128.0.35:8032
+25/12/03 04:22:04 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at distributed-cluster-1-m/10.128.0.35:10200
+25/12/03 04:22:05 INFO org.apache.hadoop.conf.Configuration: resource-types.xml not found
+25/12/03 04:22:05 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+25/12/03 04:22:05 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1764722415798_0033
+25/12/03 04:22:06 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at distributed-cluster-1-m/10.128.0.35:8030
+25/12/03 04:22:08 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageImpl: Ignoring exception of type GoogleJsonResponseException; verified object already exists with desired state.
+Is local environment: False
+Num CSV path: gs://msds-694-cohort-14-3/data/num_2020.csv
+Pre CSV path: gs://msds-694-cohort-14-3/data/pre_2020.csv
+Sub CSV path: gs://msds-694-cohort-14-3/data/sub_2020.csv
+Tag CSV path: gs://msds-694-cohort-14-3/data/tag_2020.csv
+Num RDD size: 11493263
+Pre RDD size: 2746310
+Sub RDD size: 24940
+Tag RDD size: 298803
+SIC lookup path: gs://msds-694-cohort-14-3/data/SIC_Lookup.csv
+Example SIC lookup rows: [('SIC', 'Industry'), ('100', 'AGRICULTURAL PRODUCTION-CROPS'), ('200', 'AGRICULTURAL PROD-LIVESTOCK & ANIMAL SPECIALTIES'), ('700', 'AGRICULTURAL SERVICES'), ('800', 'FORESTRY')]
+Sample of industry-level stats: [('5090', 0.801047955214891, 2.369220686020037, 104, 'WHOLESALE-MISC DURABLE GOODS'), ('3562', -0.13006673248771713, 0.050328052696454316, 99, 'BALL & ROLLER BEARINGS'), ('4922', -0.15565400871132676, 0.03616629323082309, 124, 'NATURAL GAS TRANSMISSION'), ('3570', -0.11507965230983765, 0.03496342262269905, 46, 'COMPUTER & OFFICE EQUIPMENT'), ('3713', -0.025056290439700927, 0.026495341495892066, 92, 'TRUCK & BUS BODIES')]
+Job [d5643489be4a4111800076f07561105e] finished successfully.
+done: true
+driverControlFilesUri: gs://dataproc-staging-us-central1-572818332776-elqgzrqg/google-cloud-dataproc-metainfo/3130ac0d-44cd-4f06-aced-4e41b8bb0472/jobs/d5643489be4a4111800076f07561105e/
+driverOutputResourceUri: gs://dataproc-staging-us-central1-572818332776-elqgzrqg/google-cloud-dataproc-metainfo/3130ac0d-44cd-4f06-aced-4e41b8bb0472/jobs/d5643489be4a4111800076f07561105e/driveroutput
+jobUuid: 27e6f166-960b-3a74-8b7c-cf32a05d42bf
+labels:
+  notebook: alex_luo
+placement:
+  clusterName: distributed-cluster-1
+  clusterUuid: 3130ac0d-44cd-4f06-aced-4e41b8bb0472
+pysparkJob:
+  args:
+  - --is-local
+  - 'false'
+  mainPythonFileUri: gs://msds-694-cohort-14-3/scripts/alex_luo.py
+reference:
+  jobId: d5643489be4a4111800076f07561105e
+  projectId: distributed-computing-478219
+status:
+  state: DONE
+  stateStartTime: '2025-12-03T04:23:26.261292Z'
+statusHistory:
+- state: PENDING
+  stateStartTime: '2025-12-03T04:21:58.186452Z'
+- state: SETUP_DONE
+  stateStartTime: '2025-12-03T04:21:58.207465Z'
+- details: Agent reported job success
+  state: RUNNING
+  stateStartTime: '2025-12-03T04:21:58.404706Z'
+yarnApplications:
+- name: alex_luo.py
+  progress: 1.0
+  state: FINISHED
+  trackingUrl: http://distributed-cluster-1-m:8088/proxy/application_1764722415798_0033/

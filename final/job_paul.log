@@ -1,0 +1,60 @@
+Waiting for job output...
+25/12/03 04:26:36 INFO org.apache.spark.SparkEnv: Registering MapOutputTracker
+25/12/03 04:26:36 INFO org.apache.spark.SparkEnv: Registering BlockManagerMaster
+25/12/03 04:26:36 INFO org.apache.spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+25/12/03 04:26:36 INFO org.apache.spark.SparkEnv: Registering OutputCommitCoordinator
+25/12/03 04:26:36 INFO org.sparkproject.jetty.util.log: Logging initialized @2940ms to org.sparkproject.jetty.util.log.Slf4jLog
+25/12/03 04:26:36 INFO org.sparkproject.jetty.server.Server: jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 1.8.0_472-b08
+25/12/03 04:26:36 INFO org.sparkproject.jetty.server.Server: Started @3045ms
+25/12/03 04:26:36 INFO org.sparkproject.jetty.server.AbstractConnector: Started ServerConnector@5e2a9218{HTTP/1.1, (http/1.1)}{0.0.0.0:35487}
+25/12/03 04:26:37 INFO com.google.cloud.dataproc.DataprocSparkPlugin: Registered 128 driver metrics
+25/12/03 04:26:38 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at distributed-cluster-1-m/10.128.0.35:8032
+25/12/03 04:26:38 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at distributed-cluster-1-m/10.128.0.35:10200
+25/12/03 04:26:38 INFO org.apache.hadoop.conf.Configuration: resource-types.xml not found
+25/12/03 04:26:38 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+25/12/03 04:26:39 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1764722415798_0036
+25/12/03 04:26:40 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at distributed-cluster-1-m/10.128.0.35:8030
+25/12/03 04:26:42 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageImpl: Ignoring exception of type GoogleJsonResponseException; verified object already exists with desired state.
+Is local environment: False
+Num CSV path: gs://msds-694-cohort-14-3/data/num_2020.csv
+Pre CSV path: gs://msds-694-cohort-14-3/data/pre_2020.csv
+Sub CSV path: gs://msds-694-cohort-14-3/data/sub_2020.csv
+Tag CSV path: gs://msds-694-cohort-14-3/data/tag_2020.csv
+Num RDD size: 11493263
+Pre RDD size: 2746310
+Sub RDD size: 24940
+Tag RDD size: 298803
+Job [ff1b5f3879aa44aaae61ea2d8fd1e2b9] finished successfully.
+done: true
+driverControlFilesUri: gs://dataproc-staging-us-central1-572818332776-elqgzrqg/google-cloud-dataproc-metainfo/3130ac0d-44cd-4f06-aced-4e41b8bb0472/jobs/ff1b5f3879aa44aaae61ea2d8fd1e2b9/
+driverOutputResourceUri: gs://dataproc-staging-us-central1-572818332776-elqgzrqg/google-cloud-dataproc-metainfo/3130ac0d-44cd-4f06-aced-4e41b8bb0472/jobs/ff1b5f3879aa44aaae61ea2d8fd1e2b9/driveroutput
+jobUuid: 2d88d6f0-fd68-3697-90b5-d99953c5b81f
+labels:
+  notebook: paul
+placement:
+  clusterName: distributed-cluster-1
+  clusterUuid: 3130ac0d-44cd-4f06-aced-4e41b8bb0472
+pysparkJob:
+  args:
+  - --is-local
+  - 'false'
+  mainPythonFileUri: gs://msds-694-cohort-14-3/scripts/paul.py
+reference:
+  jobId: ff1b5f3879aa44aaae61ea2d8fd1e2b9
+  projectId: distributed-computing-478219
+status:
+  state: DONE
+  stateStartTime: '2025-12-03T04:27:36.393319Z'
+statusHistory:
+- state: PENDING
+  stateStartTime: '2025-12-03T04:26:32.786201Z'
+- state: SETUP_DONE
+  stateStartTime: '2025-12-03T04:26:32.803687Z'
+- details: Agent reported job success
+  state: RUNNING
+  stateStartTime: '2025-12-03T04:26:32.951224Z'
+yarnApplications:
+- name: paul
+  progress: 1.0
+  state: FINISHED
+  trackingUrl: http://distributed-cluster-1-m:8088/proxy/application_1764722415798_0036/

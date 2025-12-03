@@ -1,0 +1,110 @@
+Waiting for job output...
+25/12/03 04:16:23 INFO org.apache.spark.SparkEnv: Registering MapOutputTracker
+25/12/03 04:16:23 INFO org.apache.spark.SparkEnv: Registering BlockManagerMaster
+25/12/03 04:16:23 INFO org.apache.spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+25/12/03 04:16:23 INFO org.apache.spark.SparkEnv: Registering OutputCommitCoordinator
+25/12/03 04:16:23 INFO org.sparkproject.jetty.util.log: Logging initialized @2956ms to org.sparkproject.jetty.util.log.Slf4jLog
+25/12/03 04:16:23 INFO org.sparkproject.jetty.server.Server: jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 1.8.0_472-b08
+25/12/03 04:16:23 INFO org.sparkproject.jetty.server.Server: Started @3068ms
+25/12/03 04:16:23 INFO org.sparkproject.jetty.server.AbstractConnector: Started ServerConnector@4678efa2{HTTP/1.1, (http/1.1)}{0.0.0.0:41105}
+25/12/03 04:16:24 INFO com.google.cloud.dataproc.DataprocSparkPlugin: Registered 128 driver metrics
+25/12/03 04:16:25 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at distributed-cluster-1-m/10.128.0.35:8032
+25/12/03 04:16:25 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at distributed-cluster-1-m/10.128.0.35:10200
+25/12/03 04:16:25 INFO org.apache.hadoop.conf.Configuration: resource-types.xml not found
+25/12/03 04:16:25 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+25/12/03 04:16:26 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1764722415798_0031
+25/12/03 04:16:27 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at distributed-cluster-1-m/10.128.0.35:8030
+25/12/03 04:16:28 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageImpl: Ignoring exception of type GoogleJsonResponseException; verified object already exists with desired state.
+✅ Connected to Spark cluster!
+Spark Version: 3.1.3
+Master: yarn
+App ID: application_1764722415798_0031
+Is local environment: False
+Num CSV path: gs://msds-694-cohort-14-3/data/num_2020.csv
+Pre CSV path: gs://msds-694-cohort-14-3/data/pre_2020.csv
+Sub CSV path: gs://msds-694-cohort-14-3/data/sub_2020.csv
+Tag CSV path: gs://msds-694-cohort-14-3/data/tag_2020.csv
+Num RDD size: 11493263
+Pre RDD size: 2746310
+Sub RDD size: 24940
+Tag RDD size: 298803
+ADSH: adsh, Tag: tag, Date: ddate, Value: value
+ADSH: 0001564590-20-010652, Tag: AccountsPayableCurrentAndNoncurrent, Date: 20181231, Value: 607000.0
+ADSH: 0000753308-20-000021, Tag: LongTermDebtCurrent, Date: 20181231, Value: 602000000.0
+ADSH: 0001393883-20-000011, Tag: RevenueFromContractWithCustomerExcludingAssessedTax, Date: 20181231, Value: 9312000.0
+ADSH: 0001507385-20-000034, Tag: StockRedeemedOrCalledDuringPeriodValue, Date: 20191231, Value: 182347000.0
+ADSH: adsh, CIK: cik, Name: name
+ADSH: 0000002178-20-000013, CIK: 2178, Name: "ADAMS RESOURCES & ENERGY
+ADSH: 0000002488-20-000008, CIK: 2488, Name: ADVANCED MICRO DEVICES INC
+ADSH: 0000002969-20-000010, CIK: 2969, Name: AIR PRODUCTS & CHEMICALS INC /DE/
+ADSH: 0000003499-20-000005, CIK: 3499, Name: ALEXANDERS INC
+ADSH: adsh, Tag: tag, Plabel: plabel
+ADSH: 0000002178-20-000013, Tag: CashAndCashEquivalentsAtCarryingValue, Plabel: Cash and cash equivalents
+ADSH: 0000002178-20-000013, Tag: RestrictedCashCurrent, Plabel: Restricted cash
+ADSH: 0000002178-20-000013, Tag: AccountsReceivableNetCurrent, Plabel: "Accounts receivable
+ADSH: 0000002178-20-000013, Tag: AccountsReceivableRelatedPartiesCurrent, Plabel: Accounts receivable  related party
+Tag: tag, TLabel: tlabel, Doc: doc
+Tag: OperatingLeasesRentExpenseNet, TLabel: "Operating Leases, Doc:  Rent Expense
+Tag: OperatingLeaseVariableLeaseIncome, TLabel: "Operating Lease, Doc:  Variable Lease Income"
+Tag: OperatingLeaseWeightedAverageDiscountRatePercent, TLabel: "Operating Lease, Doc:  Weighted Average Discount Rate
+Tag: DeferredCompensationArrangementWithIndividualCompensationExpense, TLabel: "Deferred Compensation Arrangement with Individual, Doc:  Compensation Expense"
+ADSH: 0001239819-20-000032, Tag: NetIncomeLoss, Value: 11004241.0, Quarter: q1
+ADSH: 0001572758-20-000018, Tag: NetIncomeLoss, Value: 3209000.0, Quarter: q1
+ADSH: 0001564590-20-009164, Tag: NetIncomeLoss, Value: 8997000.0, Quarter: q1
+ADSH: 0001628280-20-003720, Tag: NetIncomeLoss, Value: -45120000.0, Quarter: q1
+ADSH: 0001404912-20-000006, Tag: NetIncomeLoss, Value: 178443000.0, Quarter: q1
+[PreEntry(adsh='0000002178-20-000013', report='4', line='29', stmt='IS', inpth='0', rfile='H', tag='NetIncomeLoss', version='us-gaap/2019', plabel='Net (losses) earnings', negating='0', quarter='q1', year='2020'), PreEntry(adsh='0000002488-20-000008', report='2', line='13', stmt='IS', inpth='0', rfile='H', tag='NetIncomeLoss', version='us-gaap/2019', plabel='Net income (loss)', negating='0', quarter='q1', year='2020'), PreEntry(adsh='0000002969-20-000010', report='2', line='15', stmt='IS', inpth='0', rfile='H', tag='NetIncomeLoss', version='us-gaap/2019', plabel='Net Income Attributable to Air Products', negating='0', quarter='q1', year='2020'), PreEntry(adsh='0000003499-20-000005', report='4', line='13', stmt='IS', inpth='0', rfile='H', tag='NetIncomeLoss', version='us-gaap/2019', plabel='Net income', negating='0', quarter='q1', year='2020'), PreEntry(adsh='0000003545-20-000039', report='4', line='24', stmt='IS', inpth='0', rfile='H', tag='NetIncomeLoss', version='us-gaap/2019', plabel='"Net income (loss) attributable to Alico', negating=' Inc. common stockholders"', quarter='0', year='q1')]
+ADSH: 0000097476-20-000026, Name: TEXAS INSTRUMENTS INC, SIC: 3674.0, Form: 10-Q, Tag: NetIncomeLoss, Value: 2522000000.0, Quarter: q3, Year: 2020
+ADSH: 0000097476-20-000026, Name: TEXAS INSTRUMENTS INC, SIC: 3674.0, Form: 10-Q, Tag: NetIncomeLoss, Value: 2522000000.0, Quarter: q3, Year: 2020
+ADSH: 0000097476-20-000026, Name: TEXAS INSTRUMENTS INC, SIC: 3674.0, Form: 10-Q, Tag: NetIncomeLoss, Value: 2522000000.0, Quarter: q3, Year: 2020
+ADSH: 0000097476-20-000026, Name: TEXAS INSTRUMENTS INC, SIC: 3674.0, Form: 10-Q, Tag: NetIncomeLoss, Value: 2522000000.0, Quarter: q3, Year: 2020
+ADSH: 0000097476-20-000026, Name: TEXAS INSTRUMENTS INC, SIC: 3674.0, Form: 10-Q, Tag: NetIncomeLoss, Value: 2522000000.0, Quarter: q3, Year: 2020
+ADSH: 0000057131-20-000006, Name: LA-Z-BOY INC, SIC: 2510.0, Form: 10-Q, Tag: Assets, Value: 1059790000.0, Quarter: q1, Year: 2020
+ADSH: 0000057131-20-000006, Name: LA-Z-BOY INC, SIC: 2510.0, Form: 10-Q, Tag: Assets, Value: 1442633000.0, Quarter: q1, Year: 2020
+ADSH: 0001185185-20-000304, Name: FREQUENCY ELECTRONICS INC, SIC: 3825.0, Form: 10-Q, Tag: Assets, Value: 86771000.0, Quarter: q1, Year: 2020
+ADSH: 0001185185-20-000304, Name: FREQUENCY ELECTRONICS INC, SIC: 3825.0, Form: 10-Q, Tag: Assets, Value: 90168000.0, Quarter: q1, Year: 2020
+ADSH: 0000886206-20-000004, Name: FRANKLIN COVEY CO, SIC: 8741.0, Form: 10-Q, Tag: Assets, Value: 211291000.0, Quarter: q1, Year: 2020
+SIC: 6792.0, Quarter: q1, Year: 2020, ROA: 120.21795389985407
+SIC: 5094.0, Quarter: q3, Year: 2020, ROA: 61.1054072185697
+SIC: 5094.0, Quarter: q4, Year: 2020, ROA: 59.31981983946004
+SIC: 2111.0, Quarter: q1, Year: 2020, ROA: 57.753316488563236
+SIC: 6794.0, Quarter: q4, Year: 2020, ROA: 51.3332469439113
+SIC: 3585.0, Quarter: q1, Year: 2020, ROA: 48.40412138795041
+SIC: 3021.0, Quarter: q2, Year: 2020, ROA: 46.42901409756654
+SIC: 6794.0, Quarter: q3, Year: 2020, ROA: 45.8835600585174
+SIC: 3751.0, Quarter: q1, Year: 2020, ROA: 42.456301677444706
+SIC: 3944.0, Quarter: q1, Year: 2020, ROA: 41.0423217444494
+Job [0c8f659774df4511bf86c603e99fadff] finished successfully.
+done: true
+driverControlFilesUri: gs://dataproc-staging-us-central1-572818332776-elqgzrqg/google-cloud-dataproc-metainfo/3130ac0d-44cd-4f06-aced-4e41b8bb0472/jobs/0c8f659774df4511bf86c603e99fadff/
+driverOutputResourceUri: gs://dataproc-staging-us-central1-572818332776-elqgzrqg/google-cloud-dataproc-metainfo/3130ac0d-44cd-4f06-aced-4e41b8bb0472/jobs/0c8f659774df4511bf86c603e99fadff/driveroutput
+jobUuid: 2b244f21-861e-3af7-a06f-ca290888c7ba
+labels:
+  notebook: ignacio
+placement:
+  clusterName: distributed-cluster-1
+  clusterUuid: 3130ac0d-44cd-4f06-aced-4e41b8bb0472
+pysparkJob:
+  args:
+  - --is-local
+  - 'false'
+  mainPythonFileUri: gs://msds-694-cohort-14-3/scripts/ignacio.py
+reference:
+  jobId: 0c8f659774df4511bf86c603e99fadff
+  projectId: distributed-computing-478219
+status:
+  state: DONE
+  stateStartTime: '2025-12-03T04:18:31.118063Z'
+statusHistory:
+- state: PENDING
+  stateStartTime: '2025-12-03T04:16:19.570837Z'
+- state: SETUP_DONE
+  stateStartTime: '2025-12-03T04:16:19.588661Z'
+- details: Agent reported job success
+  state: RUNNING
+  stateStartTime: '2025-12-03T04:16:19.765310Z'
+yarnApplications:
+- name: GCSCluster
+  progress: 1.0
+  state: FINISHED
+  trackingUrl: http://distributed-cluster-1-m:8088/proxy/application_1764722415798_0031/

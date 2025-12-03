@@ -1,0 +1,171 @@
+Waiting for job output...
+25/12/03 04:18:51 INFO org.apache.spark.SparkEnv: Registering MapOutputTracker
+25/12/03 04:18:51 INFO org.apache.spark.SparkEnv: Registering BlockManagerMaster
+25/12/03 04:18:51 INFO org.apache.spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+25/12/03 04:18:51 INFO org.apache.spark.SparkEnv: Registering OutputCommitCoordinator
+25/12/03 04:18:51 INFO org.sparkproject.jetty.util.log: Logging initialized @3081ms to org.sparkproject.jetty.util.log.Slf4jLog
+25/12/03 04:18:51 INFO org.sparkproject.jetty.server.Server: jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 1.8.0_472-b08
+25/12/03 04:18:51 INFO org.sparkproject.jetty.server.Server: Started @3216ms
+25/12/03 04:18:51 INFO org.sparkproject.jetty.server.AbstractConnector: Started ServerConnector@28ef871f{HTTP/1.1, (http/1.1)}{0.0.0.0:34767}
+25/12/03 04:18:52 INFO com.google.cloud.dataproc.DataprocSparkPlugin: Registered 128 driver metrics
+25/12/03 04:18:53 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at distributed-cluster-1-m/10.128.0.35:8032
+25/12/03 04:18:53 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at distributed-cluster-1-m/10.128.0.35:10200
+25/12/03 04:18:54 INFO org.apache.hadoop.conf.Configuration: resource-types.xml not found
+25/12/03 04:18:54 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+25/12/03 04:18:54 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1764722415798_0032
+25/12/03 04:18:55 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at distributed-cluster-1-m/10.128.0.35:8030
+25/12/03 04:18:57 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageImpl: Ignoring exception of type GoogleJsonResponseException; verified object already exists with desired state.
+Is local environment: False
+Num CSV path: gs://msds-694-cohort-14-3/data/num_2020.csv
+Pre CSV path: gs://msds-694-cohort-14-3/data/pre_2020.csv
+Sub CSV path: gs://msds-694-cohort-14-3/data/sub_2020.csv
+Tag CSV path: gs://msds-694-cohort-14-3/data/tag_2020.csv
+Num RDD size: 11493263
+Pre RDD size: 2746310
+Sub RDD size: 24940
+Tag RDD size: 298803
+Parsed num rows: 11493262
+Parsed sub rows: 24939
+=== Q1: rows by tag (top 20) ===
+StockholdersEquity: 477807
+RevenueFromContractWithCustomerExcludingAssessedTax: 403939
+StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest: 279204
+NetIncomeLoss: 251066
+Revenues: 197496
+ProfitLoss: 138813
+OperatingIncomeLoss: 134502
+Assets: 126273
+IncomeTaxExpenseBenefit: 101731
+AdjustmentsToAdditionalPaidInCapitalSharebasedCompensationRequisiteServicePeriodRecognitionValue: 98092
+AvailableForSaleSecuritiesDebtSecurities: 90307
+SharesOutstanding: 84127
+RevenueFromContractWithCustomerIncludingAssessedTax: 82693
+OtherComprehensiveIncomeLossNetOfTax: 77563
+CommonStockSharesOutstanding: 77373
+CashAndCashEquivalentsAtCarryingValue: 75542
+InterestExpense: 72855
+Goodwill: 71378
+IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest: 66361
+StockIssuedDuringPeriodValueNewIssues: 65585
+
+=== Q2: unique filings (adsh) ===
+Unique IDs: 24939
+
+Top filings by number of rows (top 20):
+0001193125-20-047353: 8044
+0001558370-20-004766: 5869
+0000004904-20-000084: 4822
+0001109357-20-000053: 4802
+0001109357-20-000207: 4762
+0000004904-20-000062: 4623
+0000930413-20-000859: 4575
+0001109357-20-000165: 4563
+0001664703-20-000013: 4404
+0001213900-20-007917: 4342
+0000913778-20-000003: 4326
+0000092122-20-000017: 4138
+0001193125-20-135806: 4105
+0001610520-20-000041: 3864
+0001370368-20-000076: 3822
+0000891478-20-000017: 3772
+0001193125-20-026877: 3734
+0001104659-20-045603: 3619
+0000930413-20-000534: 3529
+0000913778-20-000008: 3505
+
+=== Q3: rows per year ===
+1932: 4
+1977: 2
+1987: 4
+1988: 9
+1989: 8
+1990: 8
+1991: 5
+1992: 5
+1993: 10
+1994: 13
+1995: 21
+1996: 25
+1997: 21
+1998: 28
+1999: 37
+2000: 34
+2001: 37
+2002: 20
+2003: 47
+2004: 81
+2005: 78
+2006: 110
+2007: 143
+2008: 107
+2009: 176
+2010: 314
+2011: 730
+2012: 1126
+2013: 1489
+2014: 2204
+2015: 4913
+2016: 54888
+2017: 634658
+2018: 1798063
+2019: 5285527
+2020: 3707920
+2021: 304
+2022: 58
+2023: 18
+2024: 4
+2026: 1
+2027: 1
+2029: 11
+=== Companies with IPO-related filings per quarter (unique CIKs) ===
+2020 q1: 66
+2020 q2: 63
+2020 q3: 83
+2020 q4: 105
+
+=== Unique reporting companies per quarter ===
+2020 q1: 5404
+2020 q2: 5843
+2020 q3: 5692
+2020 q4: 5744
+
+=== New reporting companies per quarter ===
+2020 q1: 5404
+2020 q2: 1002
+2020 q3: 223
+2020 q4: 281
+Figure(1200x600)
+Job [34727cedcc9b4e77b6e14b6b6d4625c3] finished successfully.
+done: true
+driverControlFilesUri: gs://dataproc-staging-us-central1-572818332776-elqgzrqg/google-cloud-dataproc-metainfo/3130ac0d-44cd-4f06-aced-4e41b8bb0472/jobs/34727cedcc9b4e77b6e14b6b6d4625c3/
+driverOutputResourceUri: gs://dataproc-staging-us-central1-572818332776-elqgzrqg/google-cloud-dataproc-metainfo/3130ac0d-44cd-4f06-aced-4e41b8bb0472/jobs/34727cedcc9b4e77b6e14b6b6d4625c3/driveroutput
+jobUuid: 4d28f356-d03b-343e-8c17-4bd46ae93a4c
+labels:
+  notebook: chris
+placement:
+  clusterName: distributed-cluster-1
+  clusterUuid: 3130ac0d-44cd-4f06-aced-4e41b8bb0472
+pysparkJob:
+  args:
+  - --is-local
+  - 'false'
+  mainPythonFileUri: gs://msds-694-cohort-14-3/scripts/chris.py
+reference:
+  jobId: 34727cedcc9b4e77b6e14b6b6d4625c3
+  projectId: distributed-computing-478219
+status:
+  state: DONE
+  stateStartTime: '2025-12-03T04:21:41.212085Z'
+statusHistory:
+- state: PENDING
+  stateStartTime: '2025-12-03T04:18:47.185570Z'
+- state: SETUP_DONE
+  stateStartTime: '2025-12-03T04:18:47.204068Z'
+- details: Agent reported job success
+  state: RUNNING
+  stateStartTime: '2025-12-03T04:18:47.410535Z'
+yarnApplications:
+- name: chris-jupyter-notebook
+  progress: 1.0
+  state: FINISHED
+  trackingUrl: http://distributed-cluster-1-m:8088/proxy/application_1764722415798_0032/

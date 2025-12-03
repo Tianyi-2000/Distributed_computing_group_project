@@ -1,0 +1,175 @@
+Waiting for job output...
+Is local environment: False
+25/12/03 04:25:12 INFO org.apache.spark.SparkEnv: Registering MapOutputTracker
+25/12/03 04:25:12 INFO org.apache.spark.SparkEnv: Registering BlockManagerMaster
+25/12/03 04:25:12 INFO org.apache.spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+25/12/03 04:25:12 INFO org.apache.spark.SparkEnv: Registering OutputCommitCoordinator
+25/12/03 04:25:12 INFO org.sparkproject.jetty.util.log: Logging initialized @3024ms to org.sparkproject.jetty.util.log.Slf4jLog
+25/12/03 04:25:12 INFO org.sparkproject.jetty.server.Server: jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 1.8.0_472-b08
+25/12/03 04:25:12 INFO org.sparkproject.jetty.server.Server: Started @3143ms
+25/12/03 04:25:12 INFO org.sparkproject.jetty.server.AbstractConnector: Started ServerConnector@78ab4d98{HTTP/1.1, (http/1.1)}{0.0.0.0:44665}
+25/12/03 04:25:13 INFO com.google.cloud.dataproc.DataprocSparkPlugin: Registered 128 driver metrics
+25/12/03 04:25:14 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at distributed-cluster-1-m/10.128.0.35:8032
+25/12/03 04:25:14 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at distributed-cluster-1-m/10.128.0.35:10200
+25/12/03 04:25:15 INFO org.apache.hadoop.conf.Configuration: resource-types.xml not found
+25/12/03 04:25:15 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+25/12/03 04:25:15 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1764722415798_0035
+25/12/03 04:25:16 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at distributed-cluster-1-m/10.128.0.35:8030
+25/12/03 04:25:18 INFO com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageImpl: Ignoring exception of type GoogleJsonResponseException; verified object already exists with desired state.
+Connected to Spark cluster!
+Spark Version: 3.1.3
+Master: yarn
+App ID: application_1764722415798_0035
+Num CSV path: gs://msds-694-cohort-14-3/data/num_2020.csv
+Pre CSV path: gs://msds-694-cohort-14-3/data/pre_2020.csv
+Sub CSV path: gs://msds-694-cohort-14-3/data/sub_2020.csv
+Tag CSV path: gs://msds-694-cohort-14-3/data/tag_2020.csv
+Num RDD size: 11493263
+Pre RDD size: 2746310
+Sub RDD size: 24940
+Tag RDD size: 298803
+Subset size (lines taken from num_2020.csv): 5000
+num_subset_rdd count: 5000
+Example NUM subset row: ['0001564590-20-010652', 'AccountsPayableCurrentAndNoncurrent', 'us-gaap/2019', '20181231', '0', 'USD', '', '', '607000.0', '', 'q1', '2020']
+Example SUB row: ['0000002178-20-000013', '2178', '"ADAMS RESOURCES & ENERGY', ' INC."', '5172.0', 'US', 'TX', 'HOUSTON', '77027', '17 S. BRIAR HOLLOW LN.', '', '713-881-3600', 'US', 'TX', 'HOUSTON', '77001', 'P O BOX 844', '', 'US', 'DE', '741753147.0', 'ADAMS RESOURCES & ENERGY INC', '19920703.0', '2-ACC', '0', '1231.0', '10-K', '20191231', '2019.0', 'FY', '20200306', '2020-03-06 16:50:00.0', '0', '1', 'ae-20191231_htm.xml', '1', '', 'q1', '2020']
+Example filtered rows from subset:
+('OperatingIncomeLoss', 53369000.0)
+('NetIncomeLoss', 11004241.0)
+('NetCashProvidedByUsedInOperatingActivities', 19000000.0)
+('NetIncomeLoss', 50577000.0)
+('OperatingIncomeLoss', 378200000.0)
+('NetIncomeLoss', 3209000.0)
+('OperatingIncomeLoss', 253000.0)
+('NetIncomeLoss', -96071000.0)
+('NetIncomeLoss', -38929000.0)
+('NetCashProvidedByUsedInOperatingActivities', 38191000.0)
+Average values for operating cash flow and profitability tags (subset):
+OperatingIncomeLoss 185657975.71153846
+NetCashProvidedByUsedInOperatingActivitiesContinuingOperations -19025.0
+NetIncomeLoss 75108943.67368421
+NetCashProvidedByUsedInOperatingActivities 338335191.0625
+Full NUM example row: ['0001564590-20-010652', 'AccountsPayableCurrentAndNoncurrent', 'us-gaap/2019', '20181231', '0', 'USD', '', '', '607000.0', '', 'q1', '2020']
+Full SUB example row: ['0000002178-20-000013', '2178', '"ADAMS RESOURCES & ENERGY', ' INC."', '5172.0', 'US', 'TX', 'HOUSTON', '77027', '17 S. BRIAR HOLLOW LN.', '', '713-881-3600', 'US', 'TX', 'HOUSTON', '77001', 'P O BOX 844', '', 'US', 'DE', '741753147.0', 'ADAMS RESOURCES & ENERGY INC', '19920703.0', '2-ACC', '0', '1231.0', '10-K', '20191231', '2019.0', 'FY', '20200306', '2020-03-06 16:50:00.0', '0', '1', 'ae-20191231_htm.xml', '1', '', 'q1', '2020']
+Sample (adsh, year, tag, value) rows from full NUM:
+(('0001624794-20-000019', '2018', 'OperatingIncomeLoss'), 53369000.0)
+(('0001239819-20-000032', '2018', 'NetIncomeLoss'), 11004241.0)
+(('0001524358-20-000011', '2017', 'NetCashProvidedByUsedInOperatingActivities'), 19000000.0)
+(('0001628280-20-001900', '2019', 'NetIncomeLoss'), 50577000.0)
+(('0001564590-20-005754', '2018', 'OperatingIncomeLoss'), 378200000.0)
+(('0001572758-20-000018', '2018', 'NetIncomeLoss'), 3209000.0)
+(('0001628280-20-002318', '2018', 'OperatingIncomeLoss'), 253000.0)
+(('0001102993-20-000017', '2019', 'NetIncomeLoss'), -96071000.0)
+(('0001564590-20-007402', '2017', 'NetIncomeLoss'), -38929000.0)
+(('0001297184-20-000007', '2018', 'NetCashProvidedByUsedInOperatingActivities'), 38191000.0)
+Sample firm-year OCF: [(('0001070081-20-000064', '2019'), -98639000.0), (('0001644378-20-000008', '2019'), 41920000.0), (('0001553023-20-000025', '2017'), 579000000.0), (('0001324424-20-000009', '2019'), 5534000000.0), (('0001370368-20-000045', '2019'), -55266000000.0)]
+Sample firm-year Profit: [(('0001564590-20-005754', '2018'), 1417800000.0), (('0001564590-20-005043', '2019'), 91792000.0), (('0001046995-20-000022', '2019'), -18465000.0), (('0001562762-20-000024', '2019'), 192092000.0), (('0001561660-20-000027', '2019'), -211000000.0)]
+Sample firm-year OCF + Profit rows:
+(('0001564590-20-007328', '2017'), (68693000.0, 106956000.0))
+(('0001651094-20-000010', '2018'), (362276000.0, 146501000.0))
+(('0001564590-20-007574', '2019'), (-68996.0, -140172.0))
+(('0001564590-20-005259', '2017'), (1105000.0, 19457000.0))
+(('0001654954-20-003266', '2018'), (8472000.0, 5590000.0))
+(('0001558370-20-002630', '2019'), (-36307000.0, -136608000.0))
+(('0001564590-20-010862', '2019'), (55083000.0, -840000.0))
+(('0000950123-20-001393', '2017'), (2316000000.0, 694000000.0))
+(('0000318833-20-000008', '2017'), (-13728000.0, -483585000.0))
+(('0001524358-20-000011', '2019'), (764000000.0, 414000000.0))
+Sample firm-year OCF + Profit rows:
+(('0001070081-20-000064', '2019'), (-98639000.0, -1237043000.0))
+(('0001644378-20-000008', '2019'), (41920000.0, 53009000.0))
+(('0001553023-20-000025', '2017'), (579000000.0, -285800000.0))
+(('0001324424-20-000009', '2019'), (5534000000.0, 5307000000.0))
+(('0001370368-20-000045', '2019'), (-55266000000.0, 9919000000.0))
+(('0001705696-20-000048', '2017'), (230664000.0, 416656000.0))
+(('0001634997-20-000017', '2017'), (1762000000.0, 1764000000.0))
+(('0001477932-20-001703', '2018'), (-39757.0, -63320.0))
+(('0001437749-20-004446', '2020'), (125210000.0, 393291000.0))
+(('0000106040-20-000011', '2018'), (2348000000.0, 1685000000.0))
+Sample (adsh, sic) pairs: [('0000002178-20-000013', ' INC."'), ('0000002488-20-000008', '3674.0'), ('0000002969-20-000010', '2810.0'), ('0000003499-20-000005', '6798.0'), ('0000003545-20-000039', ' INC."')]
+Sample rows with industry: [('0001140361-20-002505', (('2018', -49682.0, 11412129.0), '3910.0')), ('0001140361-20-002505', (('2019', -237637.0, 8105772.0), '3910.0')), ('0001193125-20-035745', (('2018', 2134000.0, 4234000.0), '6036.0')), ('0001193125-20-035745', (('2019', 1840000.0, 4494000.0), '6036.0')), ('0001564590-20-006801', (('2018', 132600000.0, 749700000.0), ' INC."')), ('0001564590-20-006801', (('2017', 182800000.0, 451000000.0), ' INC."')), ('0001564590-20-006801', (('2019', 109000000.0, 459500000.0), ' INC."')), ('0000026324-20-000004', (('2018', 336273000.0, 2309538000.0), '3590.0')), ('0000026324-20-000004', (('2017', 388712000.0, 1730262000.0), '3590.0')), ('0000026324-20-000004', (('2019', 421404000.0, 2224783000.0), '3590.0'))]
+Industry-Year Average Operating Cash Flow & Profitability:
+
+SIC 3674.0, Year 2010 Avg OCF = -333000.00, Avg Profit = 35947000.00
+SIC 3674.0, Year 2011 Avg OCF = -28333.33, Avg Profit = -2835000.00
+SIC  INC.", Year 2014 Avg OCF = -117405.00, Avg Profit = -511539.00
+SIC 7381.0, Year 2014 Avg OCF = -46937.00, Avg Profit = -71270.00
+SIC 7389.0, Year 2014 Avg OCF = 63.00, Avg Profit = -282018.00
+SIC  INC.", Year 2015 Avg OCF = -359555.20, Avg Profit = -2903118.40
+SIC 6798.0, Year 2015 Avg OCF = 2888000.00, Avg Profit = 24000.00
+SIC 7381.0, Year 2015 Avg OCF = 1201.40, Avg Profit = -610589.60
+SIC 7389.0, Year 2015 Avg OCF = -103937.00, Avg Profit = -565366.00
+SIC  INC.", Year 2016 Avg OCF = 34359118.72, Avg Profit = 18186781.78
+SIC 1000.0, Year 2016 Avg OCF = -288672.00, Avg Profit = -1176472.00
+SIC 2834.0, Year 2016 Avg OCF = -15486000.00, Avg Profit = -47910000.00
+SIC 2836.0, Year 2016 Avg OCF = -52861000.00, Avg Profit = -173650000.00
+SIC 3089.0, Year 2016 Avg OCF = -76886.00, Avg Profit = -283625.00
+SIC 3679.0, Year 2016 Avg OCF = -25000.00, Avg Profit = -606836.00
+SIC 3842.0, Year 2016 Avg OCF = -26747000.00, Avg Profit = -95447000.00
+SIC 5411.0, Year 2016 Avg OCF = 70581000.00, Avg Profit = 94369000.00
+SIC 6022.0, Year 2016 Avg OCF = -4548240.00, Avg Profit = 132429.00
+SIC 6199.0, Year 2016 Avg OCF = -1092322.00, Avg Profit = 538664.00
+SIC 6311.0, Year 2016 Avg OCF = 74000000.00, Avg Profit = 168000000.00
+SIC 6531.0, Year 2016 Avg OCF = -18867.00, Avg Profit = -76962.00
+SIC 6794.0, Year 2016 Avg OCF = -465957.00, Avg Profit = -5091383.00
+SIC 6798.0, Year 2016 Avg OCF = 2721000.00, Avg Profit = 7000.00
+SIC 7372.0, Year 2016 Avg OCF = -31267.50, Avg Profit = -101320.00
+SIC  CO. LTD.", Year 2017 Avg OCF = 8355000.00, Avg Profit = -79937000.00
+SIC  CORP.", Year 2017 Avg OCF = 61226000.00, Avg Profit = 227210000.00
+SIC  INC / NEW", Year 2017 Avg OCF = -24018000.00, Avg Profit = -65524000.00
+SIC  INC /ME/", Year 2017 Avg OCF = 33604000.00, Avg Profit = 58764000.00
+SIC  INC", Year 2017 Avg OCF = 498908674.42, Avg Profit = 379792720.93
+SIC  INC. (FORMERLY YELLOWWOOD)", Year 2017 Avg OCF = -29276.00, Avg Profit = -9866639.00
+SIC  INC. /DE/", Year 2017 Avg OCF = 614566666.67, Avg Profit = 44491333.33
+SIC  INC. /MO/", Year 2017 Avg OCF = 23908000000.00, Avg Profit = 28002000000.00
+SIC  INC.", Year 2017 Avg OCF = 450740690.50, Avg Profit = 485552502.21
+SIC  INC/DE", Year 2017 Avg OCF = -5874000.00, Avg Profit = -33815000.00
+SIC  L.P.", Year 2017 Avg OCF = 1794181454.55, Avg Profit = 2231250818.18
+SIC  LLC", Year 2017 Avg OCF = 609917438.70, Avg Profit = 1359580000.75
+SIC  LP", Year 2017 Avg OCF = 434120205.33, Avg Profit = 466934280.38
+SIC  LTD", Year 2017 Avg OCF = 161986.50, Avg Profit = 30313389.00
+SIC  LTD.", Year 2017 Avg OCF = 71752810.11, Avg Profit = 98929147.42
+SIC 100.0, Year 2017 Avg OCF = 3315000.00, Avg Profit = 45667250.00
+SIC 1000.0, Year 2017 Avg OCF = 758312857.69, Avg Profit = 1256782556.75
+SIC 1040.0, Year 2017 Avg OCF = 945398604.11, Avg Profit = -47775436.33
+SIC 1220.0, Year 2017 Avg OCF = 294338666.67, Avg Profit = 150553000.00
+SIC 1221.0, Year 2017 Avg OCF = 243760955.60, Avg Profit = 694461628.40
+SIC 1311.0, Year 2017 Avg OCF = 883337383.40, Avg Profit = 280343777.78
+SIC 1381.0, Year 2017 Avg OCF = 370658454.55, Avg Profit = -1695135545.45
+SIC 1382.0, Year 2017 Avg OCF = 24260500.00, Avg Profit = -102212500.00
+SIC 1389.0, Year 2017 Avg OCF = 615603866.67, Avg Profit = 189820466.67
+SIC 1400.0, Year 2017 Avg OCF = 318595600.00, Avg Profit = 729882100.00
+SIC 1520.0, Year 2017 Avg OCF = 1964748000.00, Avg Profit = 1620960000.00
+Job [46c0241e7dd446348184d972f015b359] finished successfully.
+done: true
+driverControlFilesUri: gs://dataproc-staging-us-central1-572818332776-elqgzrqg/google-cloud-dataproc-metainfo/3130ac0d-44cd-4f06-aced-4e41b8bb0472/jobs/46c0241e7dd446348184d972f015b359/
+driverOutputResourceUri: gs://dataproc-staging-us-central1-572818332776-elqgzrqg/google-cloud-dataproc-metainfo/3130ac0d-44cd-4f06-aced-4e41b8bb0472/jobs/46c0241e7dd446348184d972f015b359/driveroutput
+jobUuid: 778a214d-6256-31df-ab57-2f04df2cdf35
+labels:
+  notebook: niki
+placement:
+  clusterName: distributed-cluster-1
+  clusterUuid: 3130ac0d-44cd-4f06-aced-4e41b8bb0472
+pysparkJob:
+  args:
+  - --is-local
+  - 'false'
+  mainPythonFileUri: gs://msds-694-cohort-14-3/scripts/niki.py
+reference:
+  jobId: 46c0241e7dd446348184d972f015b359
+  projectId: distributed-computing-478219
+status:
+  state: DONE
+  stateStartTime: '2025-12-03T04:26:16.342591Z'
+statusHistory:
+- state: PENDING
+  stateStartTime: '2025-12-03T04:25:07.922938Z'
+- state: SETUP_DONE
+  stateStartTime: '2025-12-03T04:25:07.945621Z'
+- details: Agent reported job success
+  state: RUNNING
+  stateStartTime: '2025-12-03T04:25:08.137747Z'
+yarnApplications:
+- name: GCSCluster
+  progress: 1.0
+  state: FINISHED
+  trackingUrl: http://distributed-cluster-1-m:8088/proxy/application_1764722415798_0035/
