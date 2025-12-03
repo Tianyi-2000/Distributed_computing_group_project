@@ -54,6 +54,7 @@ JOB_ID=$(gcloud dataproc jobs submit pyspark gs://$BUCKET_NAME/scripts/$NOTEBOOK
     --cluster=distributed-cluster-1 \
     --region=us-central1 \
     --project=$PROJECT_ID \
+    --labels=notebook=$NOTEBOOK_NAME \
     --format="value(reference.jobId)" \
     -- --is-local false)
 
