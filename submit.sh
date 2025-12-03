@@ -63,6 +63,9 @@ echo "Job submitted with ID: $JOB_ID"
 echo "Waiting for job to complete..."
 gcloud dataproc jobs wait "$JOB_ID" --region=us-central1 --project=$PROJECT_ID
 
+# output to local file
+gcloud dataproc jobs wait "$JOB_ID" --region=us-central1 --project=$PROJECT_ID > job_output_$NOTEBOOK_NAME.txt
+
 echo "Job completed!"
 
 # delete cluster, no approval needed
@@ -76,3 +79,6 @@ rm "$SCRIPT_PATH"
 rm "$SCRIPT_PATH"
 
 echo "Done!"
+
+# # generate html report
+# jupyter nbconvert --to html "$NOTEBOOK_PATH" --output report_$NOTEBOOK_NAME.html
